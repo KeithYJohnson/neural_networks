@@ -53,9 +53,9 @@ inputs_to_hidden_units = embed_to_hid_weights' * embedding_layer_state + ...
 % FILL IN CODE. Replace the line below by one of the options.
 % hidden_layer_state = zeros(numhid2, batchsize);
 % Options
-hidden_layer_state = 1 ./ (1 + exp(inputs_to_hidden_units));
+% (a) hidden_layer_state = 1 ./ (1 + exp(inputs_to_hidden_units));
 % (b) hidden_layer_state = 1 ./ (1 - exp(-inputs_to_hidden_units));
-% (c) hidden_layer_state = 1 ./ (1 + exp(-inputs_to_hidden_units));
+hidden_layer_state = 1 ./ (1 + exp(-inputs_to_hidden_units));
 % (d) hidden_layer_state = -1 ./ (1 + exp(-inputs_to_hidden_units));
 
 %% COMPUTE STATE OF OUTPUT LAYER.
