@@ -22,14 +22,18 @@ ybias = 0.0;
 
 %computations
 %t0
-z0 = wxh * h0 + hbias;
-h0= 1 / (1+ exp(-z0));
-y0= why *h0 + ybias;
+z0 = wxh * x0 + hbias;
+h0 = 1 / (1 + exp(-z0));
+y0 = why *h0 + ybias;
+disp('y0')
+disp(y0)
 
 %t1
-z1 = wxh * x1 + whh*h0 + hbias;
-h1 = 1 / (1+exp(-z1));
+z1 = (wxh * x1) + (whh * h0) + hbias;
+h1 = 1 / (1 + exp(-z1));
 y1 = why * h1 + ybias;
+disp('y1')
+disp(y1)
 
 %t2
 z2 = wxh * x2 + whh * h1 + hbias;
